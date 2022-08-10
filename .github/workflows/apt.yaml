@@ -1,0 +1,9 @@
+# workflow
+
+# JOB runs WHEN an EVENT OCCURS 
+  # push or pull request
+
+# runner listens for workflow requests
+  # like ubuntu, alpine
+    # set of jobs run on a runner
+
