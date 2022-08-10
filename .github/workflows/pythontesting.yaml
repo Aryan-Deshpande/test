@@ -17,6 +17,6 @@ jobs:
 
       - name: testing
         run: |
-          pytest /home/runner/work/test/test/pog.py
+          pytest tests/test*
 
 
