@@ -17,6 +17,6 @@ jobs:
 
       - name: testing
         run: |
-          pytest pog.py
+          pytest ./pog.py
 
 
