@@ -1,0 +1,22 @@
+name: testing python
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: dependencies
+        run: | 
+          python -m pip install --upgrade pip
+          pip install flake8 pytest
+
+      - name: testing
+        run: |
+          pytest pog.py
+
+
