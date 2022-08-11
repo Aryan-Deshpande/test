@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kaufen-api
+  name: kaufen
 spec:
   selector:
     matchLabels:
-      app: kaufen-api
+      app: kaufen
   template:
     metadata:
       labels:
-        app: kaufen-api
+        app: kaufen
     spec:
       nodeSelector:
         kubernetes.io/os: linux
       containers:
-      - name: kaufen-api
+      - name: kaufen
         image: kfile.azurecr.io/ki
         ports:
         - containerPort: 5000
