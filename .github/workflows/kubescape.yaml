@@ -1,4 +1,4 @@
-name: kubscape
+name: kubeconfigactions
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   nsa-security-check:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -16,5 +16,5 @@ jobs:
       - name: Install kubescape
         run: curl -s https://raw.githubusercontent.com/armosec/kubescape/master/install.sh | /bin/bash
 
-      - name: Scan YAML files
+      - name: scanning config files
         run: kubescape scan framework nsa *.yaml
